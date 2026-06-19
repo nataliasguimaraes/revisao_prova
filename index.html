@@ -13,7 +13,8 @@
   @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
   .imgwrap{width:100%;line-height:0;background:#000;position:relative}
   .imgwrap img{width:100%;display:block;image-rendering:auto}
-  .panel{padding:22px 24px 26px}
+  .panel{padding:22px 24px 26px;overflow-wrap:break-word}
+  .panel h2,.panel .qtext,.panel .brief,.panel .intro,.panel .formula,.panel .story,.panel .msg,.panel .oba,.panel .printbox,.panel .step,.panel .colname,.panel .vrow,.panel .pnum{overflow-wrap:break-word;word-break:break-word}
   .center{text-align:center}
   /* intro (tema claro) */
   #nome{position:absolute;left:30%;top:56.2%;width:47%;height:8.8%;font-family:'VT323',monospace;font-size:clamp(14px,2.6vw,26px);padding:0 3%;border:none;outline:none;border-radius:8px;background:#edf0f2;color:var(--txt)}
@@ -30,7 +31,7 @@
   .btn .play{font-size:15px}
   /* fases (tema escuro) */
   .fase{background:#060b1a;color:#cfeeff}
-  .fase h2{font-family:'Press Start 2P',monospace;color:var(--neon);font-size:clamp(11px,3.4vw,15px);line-height:1.5;text-align:center;text-shadow:0 0 8px #27c4ff88;margin:4px 0 14px;word-break:break-word}
+  .fase h2{font-family:'Press Start 2P',monospace;color:var(--neon);font-size:clamp(10px,3vw,15px);line-height:1.6;text-align:center;text-shadow:0 0 8px #27c4ff88;margin:4px 0 14px;overflow-wrap:anywhere;word-break:break-word;hyphens:auto;max-width:100%}
   .fase .sub{text-align:center;color:#8fd6ff;font-size:18px;margin:6px 0 10px}
   .fase .story{background:#0a1430;border-color:#1c3a66;color:#eaf6ff;text-align:center}
   .fase .story b{color:var(--neon)}
@@ -57,13 +58,13 @@
   .step.ok .box{background:#10c98d;border-color:#10c98d} .step b{color:var(--neon)} .step.ok b{color:#aef5d8} .step .file,.step .code{color:#ffd34d}
   /* fase5 tipos */
   .types{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:6px 0 16px}
-  .chip{font-family:'Press Start 2P',monospace;font-size:10px;padding:12px 14px;border:2px solid var(--neon);border-radius:9px;color:#04231a;background:var(--neon);cursor:grab;user-select:none;touch-action:none;box-shadow:0 0 10px #27c4ff55}
+  .chip{font-family:'Press Start 2P',monospace;font-size:10px;line-height:1.5;padding:12px 14px;border:2px solid var(--neon);border-radius:9px;color:#04231a;background:var(--neon);cursor:grab;user-select:none;touch-action:none;box-shadow:0 0 10px #27c4ff55;text-align:center;max-width:100%}
   .chip.inteiro{background:#ffd34d;border-color:#ffd34d}.chip.real{background:#ff9e4d;border-color:#ff9e4d}.chip.bool{background:#c98bff;border-color:#c98bff}
   .ghost{position:fixed;z-index:9999;pointer-events:none;opacity:.92;transform:translate(-50%,-50%) scale(1.05)}
   .ttable{width:100%}
-  .trow{display:flex;align-items:center;gap:10px;background:#0a1430;border:2px solid #1c3a66;border-radius:9px;padding:10px 12px;margin-bottom:6px}
-  .colname{flex:1;font-size:17px;color:#d7ecff}
-  .slot{flex:0 0 auto;min-width:150px;min-height:40px;border:2px dashed #3a6aa0;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Press Start 2P',monospace;font-size:9px;color:#6fa8d8;background:#0c1838;text-align:center;padding:6px}
+  .trow{display:flex;align-items:center;gap:10px;background:#0a1430;border:2px solid #1c3a66;border-radius:9px;padding:10px 12px;margin-bottom:6px;flex-wrap:wrap}
+  .colname{flex:1 1 140px;min-width:0;font-size:17px;color:#d7ecff;overflow-wrap:break-word}
+  .slot{flex:1 1 150px;min-width:140px;min-height:40px;border:2px dashed #3a6aa0;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Press Start 2P',monospace;font-size:9px;color:#6fa8d8;background:#0c1838;text-align:center;padding:6px}
   .slot.over{border-color:var(--neon);background:#10243f}.slot.ok{border-style:solid;border-color:#10c98d;background:#0d2e22;color:#aef5d8}
   /* fase7 quiz */
   .pnum{font-family:'Press Start 2P',monospace;font-size:11px;color:#8fd6ff;text-align:center;margin-bottom:14px}
@@ -93,12 +94,13 @@
   .vrow input{width:90px;font-family:'Share Tech Mono',monospace;font-size:17px;text-align:center;padding:8px 6px;border:2px solid #3a6aa0;border-radius:7px;background:#0c1838;color:#fff;outline:none}
   .vrow input:focus{border-color:var(--neon)}.vrow input.ok{border-color:#10c98d;background:#0d2e22;color:#aef5d8}.vrow input.bad{border-color:#ff5b5b;background:#3a0f12;color:#ffd0d0}
   .badges{display:flex;gap:12px;justify-content:center;margin:6px 0 14px}
-  .badge{font-family:'Press Start 2P',monospace;font-size:11px;padding:10px 16px;border-radius:8px}
+  .badge{font-family:'Press Start 2P',monospace;font-size:11px;line-height:1.5;padding:10px 16px;border-radius:8px;text-align:center;max-width:100%}
   .badge.ap{background:#0d2e22;border:2px solid #10c98d;color:#aef5d8}.badge.rp{background:#3a0f12;border:2px solid #ff5b5b;color:#ffd0d0}
   /* fase11 quadro grande */
   .panelbig{background:#0a1f33;border:3px solid var(--neon);border-radius:14px;padding:18px 16px;margin-top:14px;box-shadow:0 0 16px #27c4ff33}
   .panelbig .vt{font-family:'Press Start 2P',monospace;font-size:12px;color:var(--neon);text-align:center;margin-bottom:16px}
   .bigrow{display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;margin-bottom:14px}
+  .bigrow .lab{overflow-wrap:break-word}
   .bigrow .lab{font-family:'Press Start 2P',monospace;font-size:12px;line-height:1.5}
   .lab.ap{color:#aef5d8}.lab.rp{color:#ffd0d0}.lab.tt{color:#ffd34d}
   .bigrow input{width:120px;height:56px;font-family:'Press Start 2P',monospace;font-size:18px;text-align:center;border:3px solid #3a6aa0;border-radius:10px;background:#0c1838;color:#fff;outline:none}
@@ -334,7 +336,7 @@ function clr(){if(ghost){ghost.remove();ghost=null;}dragT=null;slots5.forEach(fu
 
 // FASE 6
 mkChecklist('cl6',[
- 'Abra a planilha <span class="file">database_album</span>.',
+ 'Abra a planilha <span class="file">album_da_turma</span>.',
  'Selecione todas as células das colunas <b>A</b> e <b>B</b> que contêm dados.',
  'Clique em <b>Dados → Classificar intervalo → Opções avançadas</b>.',
  'Marque <b>"Os dados possuem linha de cabeçalho"</b> (se selecionou o cabeçalho).',
